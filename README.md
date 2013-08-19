@@ -2,4 +2,6 @@ description
 =======
 This code is created for trying tmlib.
 
-See TM Life(tmlib's author blog) for detail(touch game ste00 - step05).
+Please see <a href="http://tmlife.net" target="_blank">TM Life</a> for detail(tmlib's author blog).
+
+Touch game(step00 - step05) is compatible with this code.
