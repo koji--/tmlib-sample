@@ -22,10 +22,34 @@ var FONT_FAMILY_FLAT= "'Helvetica-Light' 'Meiryo' sans-serif";  // フラット�
 
 // アセット
 var ASSETS = {
-    "bgm": "http://jsrun.it/static/assets/sound/01/sound.mp3",
-    "pinponSE": "http://jsrun.it/assets/y/T/T/B/yTTBV.mp3",
-    "booSE": "http://jsrun.it/assets/j/x/D/Y/jxDYu.mp3",
-    "clearSE": "http://jsrun.it/assets/7/2/S/s/72Ss5.mp3",
+    "bgm": "sounds/bgm.mp3",
+    "booSE": "sounds/boo.mp3",
+    "clearSE": "sounds/clear.mp3",
+    "0001": "sounds/0000.mp3",
+    "0002": "sounds/0001.mp3",
+    "0003": "sounds/0002.mp3",
+    "0004": "sounds/0003.mp3",
+    "0005": "sounds/0004.mp3",
+    "0006": "sounds/0005.mp3",
+    "0007": "sounds/0006.mp3",
+    "0008": "sounds/0007.mp3",
+    "0009": "sounds/0008.mp3",
+    "0010": "sounds/0009.mp3",
+    "0011": "sounds/0010.mp3",
+    "0012": "sounds/0011.mp3",
+    "0013": "sounds/0012.mp3",
+    "0014": "sounds/0013.mp3",
+    "0015": "sounds/0014.mp3",
+    "0016": "sounds/0015.mp3",
+    "0017": "sounds/0016.mp3",
+    "0018": "sounds/0017.mp3",
+    "0019": "sounds/0018.mp3",
+    "0020": "sounds/0019.mp3",
+    "0021": "sounds/0020.mp3",
+    "0022": "sounds/0021.mp3",
+    "0023": "sounds/0022.mp3",
+    "0024": "sounds/0023.mp3",
+    "0025": "sounds/clear.mp3",
 };
 
 /*
@@ -99,7 +123,8 @@ tm.define("GameScene", {
                             tm.asset.AssetManager.get("clearSE").clone().play();
                         }
                         // 正解 SE 再生
-                        tm.asset.AssetManager.get("pinponSE").clone().play();
+                        var number_se = ("000" + self.currentNumber).substr(-4);
+                        tm.asset.AssetManager.get(number_se).clone().play();
                         self.currentNumber += 1;// インクリメント
                         this.disable();         // ボタン無効
                     }
